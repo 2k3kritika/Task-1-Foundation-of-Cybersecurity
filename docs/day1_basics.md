@@ -1,5 +1,7 @@
 # 🧠 Day 1: Cybersecurity Fundamentals
 
+[Back to main README](/README.md)
+
 ## 📌 Objective
 Understand the **core principles of cybersecurity**, common threats, and how attacks actually happen. This forms the **foundation** for everything in this lab.
 
