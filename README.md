@@ -181,39 +181,15 @@ Task1_Foundation/
 │
 ├── screenshots/  ← (Images of lab setup & outputs)
 │
+│
+│
+├── extra_screenshots/  ← (Images of extra lab setup & outputs)
+│
+├── kali/  ← (Documentation of extra lab setup & outputs)
+│
 └── reports/      ← (Final reports or PDFs)
-```
-
----
-
-## 🧾 Where to Add Detailed Documentation?
-
-👉 All detailed notes should be added inside:
 
 ```
-docs/
-```
-
-### Example:
-- Day 1 → `docs/day1_basics.md`, `docs/day1_lab_setup.md`
-- Day 2 → `docs/day2_linux.md`
-- Day 3 → `docs/day3_networking.md`
-
-👉 Then link them inside this README (already done above).
-
-This keeps:
-- README = clean + readable  
-- docs = deep + detailed  
-
----
-
-## 📊 Deliverables
-
-- ✔️ Lab setup screenshots
-- ✔️ Linux & networking notes (inside `docs/`)
-- ✔️ Python automation scripts
-- ✔️ GitHub repository
-- ✔️ 5-minute demo video
 
 ---
 
@@ -240,11 +216,13 @@ All activities were performed in a **controlled lab environment**.
 
 ---
 
+## Extras
+- [Kali Password reset using GRUB](kali/password-reset.md)
+
+---
+
 ## 🚀 Next Step
 
 ➡️ [Task 2: Network Security & Scanning](../Task2_NetworkSecurity/README.md)
 
 ---
-
-## Extras
-- [Kali Password reset using GRUB](kali/password-reset.md)
