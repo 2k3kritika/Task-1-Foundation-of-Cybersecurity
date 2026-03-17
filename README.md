@@ -60,7 +60,7 @@ This repository is structured to keep the main README clean and easy to read.
 ### 🧪 Lab Architecture
 ```
 [Kali Linux] ---> [Metasploitable2]
-        \--> [DVWA]
+            \---> [DVWA]
 ```
 
 📄 Full Setup Guide → [Day 1 Lab Setup](./docs/day1_lab_setup.md)
