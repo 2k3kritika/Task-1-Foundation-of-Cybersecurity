@@ -1,5 +1,7 @@
 # 🔐 Kali Linux Password Reset via GRUB (Lab Setup Note)
 
+[Back to main README](/README.md)
+
 ## 📌 Overview
 This document explains how to reset the password of a Kali Linux virtual machine using the GRUB bootloader. It also includes a real-world variation where the reset worked even with a modified command, along with the reasoning behind it.
 
@@ -38,6 +40,7 @@ This document explains how to reset the password of a Kali Linux virtual machine
 - Select default Kali boot option  
 - Press `e` to edit boot parameters  
 
+![Boot into root shell](/screenshots/password_reset/edit_boot_entry.png)
 ---
 
 ### Step 3: Modify Boot Parameters
@@ -59,7 +62,7 @@ Example:
 ```bash
 linux /boot/vmlinuz-xxxx root=UUID=xxxx ro quiet init=/bin/bash
 ```
-
+![Modified Boot entry](/screenshots/password_reset/modify_boot_parameters.png)
 ---
 
 ### Step 4: Boot into Root Shell
@@ -67,6 +70,7 @@ linux /boot/vmlinuz-xxxx root=UUID=xxxx ro quiet init=/bin/bash
 - Press `Ctrl + X` or `F10`  
 - System boots into a root shell without requiring a password  
 
+![Boot into Root shell](/screenshots/password_reset/boot_into_root_shell.png)
 ---
 
 ### Step 5: Remount Filesystem
@@ -86,12 +90,14 @@ Reset password for default user (`kali`):
 ```bash
 passwd kali
 ```
+![Reset the password](/screenshots/password_reset/reset_passwd.png)
 
 If username is unknown:
 
 ```bash
 ls /home
 ```
+![Navigate to Home](/screenshots/password_reset/navigated_to_home.png)
 
 ---
 
@@ -106,6 +112,7 @@ or
 ```bash
 exec /sbin/init
 ```
+![Successfully changed the pwd and reboot is done](/screenshots/password_reset/successfully_updated_and_rebooting.png)
 
 ---
 
@@ -192,13 +199,5 @@ This exercise demonstrates:
 - Practical understanding of system internals  
 - Ability to troubleshoot access issues  
 - Awareness of real-world security weaknesses  
-
----
-
-## 🚀 Next Steps
-
-- Add screenshots of each step  
-- Push this README to GitHub  
-- Include as part of cybersecurity lab setup documentation  
 
 ---
