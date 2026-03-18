@@ -68,14 +68,17 @@ This includes installing:
 # 🌐 2. Installing DVWA in Kali Linux
 
 ## 🔹 Step 1: Clone DVWA Repository
-
-```
-cd /var/www/html
-sudo git clone https://github.com/digininja/DVWA.git
-🔹 Step 2: Set Permissions
-sudo chmod -R 777 DVWA
-🔹 Step 3: Configure DVWA
-cd DVWA/config
+1. Search **DVDA github** on google.
+2. Click on 1st link and download it → code → https://github.com/digininja/DVWA.git 
+3. In Kali Linux terminal go to this folder (it's the default directory of web server): 
+    `cd /var/www/html`
+4. Type:
+    `sudo git clone https://github.com/digininja/DVWA.git`
+5. Set Permissions:
+    `sudo chmod -R 777 DVWA`
+6. Go to Configure DVWA and type `ls` to get list items → `cd DVDA` → `ls`→ `cd config`.
+    - directly: `cd DVWA/config`
+7. Get list items `ls` → and find this file `config.inc.php.dist` and copy it at the same directory.
 cp config.inc.php.dist config.inc.php
 sudo mousepad config.inc.php
 
