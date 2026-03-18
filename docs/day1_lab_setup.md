@@ -79,128 +79,100 @@ This includes installing:
 6. Go to Configure DVWA and type `ls` to get list items → `cd DVDA` → `ls`→ `cd config`.
     - directly: `cd DVWA/config`
 7. Get list items `ls` → and find this file `config.inc.php.dist` and copy it at the same directory.
-cp config.inc.php.dist config.inc.php
-sudo mousepad config.inc.php
+    `cp config.inc.php.dist config.inc.php`
+8. Go to any editor: `sudo mousepad config.inc.php`
+9. Update:
+    `$_DVWA['db_user'] = 'admin';`
+    `$_DVWA['db_password'] = 'password';`
 
-Update:
+---
 
-$_DVWA['db_user'] = 'admin';
-$_DVWA['db_password'] = 'password';
-🔹 Step 4: Setup Database
+## 🔹 Step 2: Database Setup
+10. Setup Database
+    - Start MySQL:
+        `sudo systemctl start mysql` → starting the database mysql.
+        `sudo systemctl status mysql` → To check whether mysql started or not (shows db → active/running)
+11. Change to sudo user: `sudo su`
+12. To configure the database now, Login:
+    `sudo mysql -u root -p`
 
-Start MySQL:
+    - Note: currently no password is set so just press enter.
 
-sudo systemctl start mysql
-sudo systemctl status mysql
+13. To create the database now, Run:
+    `CREATE DATABASE dvwa;`
+14. To create the user for the database now: 
+    `CREATE USER 'admin'@'127.0.0.1' IDENTIFIED BY 'password';`
 
-Login:
+    - Note: Here username and password should match to the configured file we set earlier.
+15. Grant all privileges to this user. 
+    `GRANT ALL PRIVILEGES ON dvwa.* TO 'admin'@'127.0.0.1';`
+    `FLUSH PRIVILEGES;` →  `exit;`
 
-sudo mysql -u root -p
+    - Now database is configured, only webserver is left now.
+---
 
+## 🔹 Step 3: Webserver Setup
+16. Configure Apache & PHP webserver:
+    - Start Apache:
+    `sudo systemctl start apache2`
+    `sudo systemctl status apache2` → to check running status
+
+17. Now configure the webserver, Edit PHP config:
+    - go to this folder: `cd /etc/php` → `ls` → `cd 8.2` → `ls` → `cd apache2` → `ls` → Find & make changes to this file `php.ini`.
+    `sudo mousepad php.ini`
+18. Press `ctrl + F` and find `fopen` & Enable:
+    `allow_url_fopen = On`
+    `allow_url_include = On` → save this file and exit.
+19. Restart Apache:
+    `sudo systemctl restart apache2`
+20. Access DVWA
+    🌍 Open browser in Kali:
+    http://127.0.0.1/DVWA
+
+    🔐 Login:
+    - Username: admin
+    - Password: password
+
+    👉 Click Create / Reset Database → press enter
+    - Username: admin
+    - Password: password
+
+Now we have started DVDA on Kali Linux and now we can perform any attacks on this web app.
+
+---
+
+# 💀 3. Installing Metasploitable2
+
+## 🔹 Step 1: Download Metasploitable2
+1. Search: **Metasploitable2 download SourceForge**
+2. Open the official SourceForge link.
+3. Download the `.zip` file.
+4. Extract the downloaded file.
+
+---
+
+## 🔹 Step 2: Setup in VMware
+1. Open **VMware Workstation / Player**.
+2. Click on **Open a Virtual Machine**.
+3. Navigate to the extracted Metasploitable2 folder.
+4. Select the `.vmx` file (or `.vmdk` if required).
+5. Click **Open**.
+6. Power on the virtual machine.
+7. When prompted, select:
+   - **"I copied it"**
+
+---
+
+## 🔹 Step 3: Login to Metasploitable2
+- **Username:** `msfadmin`
+- **Password:** `msfadmin`
+
+---
+
+## 🔹 Step 4: Verify Network Connectivity
+
+### 📌 Find IP Address (Metasploitable2)
 Run:
+    `ifconfig [Metasloitable 2 IP address]`
 
-CREATE DATABASE dvwa;
-CREATE USER 'admin'@'127.0.0.1' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON dvwa.* TO 'admin'@'127.0.0.1';
-FLUSH PRIVILEGES;
-EXIT;
-🔹 Step 5: Configure Apache & PHP
-
-Start Apache:
-
-sudo systemctl start apache2
-sudo systemctl status apache2
-
-Edit PHP config:
-
-cd /etc/php
-cd */apache2
-sudo mousepad php.ini
-
-Enable:
-
-allow_url_fopen = On
-allow_url_include = On
-
-Restart Apache:
-
-sudo systemctl restart apache2
-🔹 Step 6: Access DVWA
-
-🌍 Open browser in Kali:
-
-http://127.0.0.1/DVWA
-
-🔐 Login:
-
-Username: admin
-Password: password
-
-👉 Click Create / Reset Database
-
-💀 3. Installing Metasploitable2
-🔹 Step 1: Download
-
-Search: "Metasploitable2 download SourceForge"
-
-Download and extract
-
-🔹 Step 2: Setup in VMware
-
-Open VMware → Open Virtual Machine
-
-Select .vmx / .vmdk file
-
-Click Power On
-
-Choose "I copied it"
-
-🔹 Step 3: Login
-Username: msfadmin
-Password: msfadmin
-🔹 Step 4: Verify Connectivity
-
-Find IP:
-
-ifconfig
-
-Test from Kali:
-
-ping <Metasploitable_IP>
-📸 Screenshots
-
-Add inside /screenshots folder:
-
-VMware setup
-
-Kali running
-
-DVWA working
-
-Metasploitable terminal
-
-Successful ping
-
-✅ Conclusion
-
-Successfully created a virtual cybersecurity lab:
-
-⚔️ Kali Linux → Attacker
-
-🎯 DVWA & Metasploitable2 → Targets
-
-This environment is ready for:
-
-Penetration Testing
-
-Vulnerability Analysis
-
-Security Experimentation
-
-📝 Notes
-
-Ensure all machines are on the same network (Host-Only/NAT)
-
-Use consistent VM naming
-
-Always verify connectivity before attacks
+---
