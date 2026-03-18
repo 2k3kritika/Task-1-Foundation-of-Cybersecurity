@@ -59,8 +59,8 @@ This includes installing:
 
 ### 🔐 Default Credentials
 
-Username: kali
-Password: kali
+- Username: kali
+- Password: kali
 
 
 ---
@@ -69,7 +69,7 @@ Password: kali
 
 ## 🔹 Step 1: Clone DVWA Repository
 
-```bash
+```
 cd /var/www/html
 sudo git clone https://github.com/digininja/DVWA.git
 🔹 Step 2: Set Permissions
