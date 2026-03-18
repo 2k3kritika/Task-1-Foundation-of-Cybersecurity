@@ -82,31 +82,31 @@ This includes installing:
     `cp config.inc.php.dist config.inc.php`
 8. Go to any editor: `sudo mousepad config.inc.php`
 9. Update:
-    `$_DVWA['db_user'] = 'admin';`
-    `$_DVWA['db_password'] = 'password';`
+    - `$_DVWA['db_user'] = 'admin';`
+    - `$_DVWA['db_password'] = 'password';`
 
 ---
 
 ## 🔹 Step 2: Database Setup
 10. Setup Database
     - Start MySQL:
-        `sudo systemctl start mysql` → starting the database mysql.
-        `sudo systemctl status mysql` → To check whether mysql started or not (shows db → active/running)
+        - `sudo systemctl start mysql` → starting the database mysql.
+        - `sudo systemctl status mysql` → To check whether mysql started or not (shows db → active/running)
 11. Change to sudo user: `sudo su`
 12. To configure the database now, Login:
-    `sudo mysql -u root -p`
+    - `sudo mysql -u root -p`
 
     - Note: currently no password is set so just press enter.
 
 13. To create the database now, Run:
-    `CREATE DATABASE dvwa;`
+    - `CREATE DATABASE dvwa;`
 14. To create the user for the database now: 
-    `CREATE USER 'admin'@'127.0.0.1' IDENTIFIED BY 'password';`
+    - `CREATE USER 'admin'@'127.0.0.1' IDENTIFIED BY 'password';`
 
     - Note: Here username and password should match to the configured file we set earlier.
 15. Grant all privileges to this user. 
-    `GRANT ALL PRIVILEGES ON dvwa.* TO 'admin'@'127.0.0.1';`
-    `FLUSH PRIVILEGES;` →  `exit;`
+    - `GRANT ALL PRIVILEGES ON dvwa.* TO 'admin'@'127.0.0.1';`
+    - `FLUSH PRIVILEGES;` →  `exit;`
 
     - Now database is configured, only webserver is left now.
 ---
@@ -114,15 +114,15 @@ This includes installing:
 ## 🔹 Step 3: Webserver Setup
 16. Configure Apache & PHP webserver:
     - Start Apache:
-    `sudo systemctl start apache2`
-    `sudo systemctl status apache2` → to check running status
+    - `sudo systemctl start apache2`
+    - `sudo systemctl status apache2` → to check running status
 
 17. Now configure the webserver, Edit PHP config:
     - go to this folder: `cd /etc/php` → `ls` → `cd 8.2` → `ls` → `cd apache2` → `ls` → Find & make changes to this file `php.ini`.
-    `sudo mousepad php.ini`
+    - `sudo mousepad php.ini`
 18. Press `ctrl + F` and find `fopen` & Enable:
-    `allow_url_fopen = On`
-    `allow_url_include = On` → save this file and exit.
+    - `allow_url_fopen = On`
+    - `allow_url_include = On` → save this file and exit.
 19. Restart Apache:
     `sudo systemctl restart apache2`
 20. Access DVWA
