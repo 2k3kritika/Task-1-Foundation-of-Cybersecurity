@@ -80,6 +80,7 @@ This repository is structured to keep the main README clean and easy to read.
 - Package Management: `apt`, `dpkg`
 
 📄 Detailed Notes → [Day 2 Linux](./docs/day2_linux.md)
+📄 Detailed notes → [Types of Network setting in VMware](./docs/network_setting.md)
 
 ---
 

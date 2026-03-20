@@ -126,8 +126,8 @@ This includes installing:
 19. Restart Apache:
     `sudo systemctl restart apache2`
 20. Access DVWA
-    🌍 Open browser in Kali:
-    http://127.0.0.1/DVWA
+    - 🌍 Open browser in Kali:
+    - http://127.0.0.1/DVWA
 
     🔐 Login:
     - Username: admin
@@ -176,3 +176,5 @@ Run:
     `ifconfig [Metasloitable 2 IP address]`
 
 ---
+
+# Full VMs setup on host only network in VMware
