@@ -177,4 +177,69 @@ Run:
 
 ---
 
-# Full VMs setup on host only network in VMware
+# Full VMs (Kali + Metasploitable 2/ DVWA) setup on host only network in VMware
+
+## 🧪 Setting Up Private Host-Only Cybersecurity Lab (VMware)
+
+This guide walks through setting up a **safe and isolated penetration testing lab** using:
+
+- 🐉 Kali Linux (Attacker)
+- 🎯 Metasploitable2 / DVWA (Target)
+
+---
+
+# ⚙️ 1. Create Host-Only Network
+
+### 🛠️ Steps
+1. Open **VMware**
+2. Go to **Edit → Virtual Network Editor**
+3. Find **VMnet1**
+4. Set it to **Host-Only**
+
+### ✅ Ensure Configuration
+- Subnet IP: `192.168.56.0`
+- Subnet Mask: `255.255.255.0`
+- DHCP: **Enabled**
+
+---
+
+# 💻 2. Configure Virtual Machines
+
+## 🐉 Kali Linux (Attacker)
+
+### Network Setup:
+- **Adapter 1 → NAT** (Internet access)
+- **Adapter 2 → Host-Only (VMnet1)** (Lab access)
+
+### 🎯 Result:
+- Internet access ✅
+- Can attack target machines ✅
+
+---
+
+## 🎯 Target Machine (Metasploitable2 / DVWA)
+
+### Network Setup:
+- **Only 1 Adapter → Host-Only (VMnet1)**
+
+### 🎯 Result:
+- No internet ❌
+- Fully isolated target ✅
+
+---
+
+# 📥 3. Installing Metasploitable2
+
+### 🛠️ Steps:
+1. Download **Metasploitable2 (.vmdk file)**
+2. Open VMware
+3. Click **Create New VM**
+4. Select: **Use an existing virtual disk**
+5. Choose the `.vmdk` file
+6. Start the VM
+
+### 🔑 Login Credentials:
+``` id="i6k8x1"
+Username: msfadmin
+Password: msfadmin
+```
