@@ -259,3 +259,91 @@ ifconfig
 sudo apt update
 sudo apt install apache2 mysql-server php php-mysqli git -y
 ```
+### 📥 Clone DVWA:
+```
+git clone https://github.com/digininja/DVWA.git
+```
+### 📁 Move DVWA to Web Directory:
+```
+sudo mv DVWA /var/www/html/
+```
+### 🔐 Set Permissions:
+```
+sudo chmod -R 777 /var/www/html/DVWA
+```
+### ▶️ Start Services:
+```
+sudo service apache2 start
+sudo service mysql start
+```
+### 🌍 Access DVWA:
+
+Open browser:
+```
+http://localhost/DVWA
+```
+
+### ✅ 5. Verify Lab Setup
+🔍 Step 1: Check IP Addresses
+- Kali:   `ip a`
+
+- 👉 Should show:
+```
+192.168.56.x → Host-Only Network
+
+10.x.x.x → NAT Network
+```
+- Metasploitable: `ifconfig` 
+
+- 👉 Should show: `192.168.56.x` 
+
+### 🔗 Step 2: Test Connectivity
+
+From Kali:
+```
+ping <target-ip>
+```
+✔ If successful → Network working
+
+### 🔎 Step 3: Scan Target
+```
+nmap <target-ip>
+```
+✔ You should see open ports
+
+---
+
+# 🛑 6. Safely Shutting Down the Lab
+### 🔻 Shutdown VMs
+Kali:
+```
+sudo shutdown now
+```
+Metasploitable:
+```
+sudo shutdown -h now
+```
+Note: 🔌 Disconnect Network (Optional but Recommended)
+- Go to VM Settings
+- Open Network Adapter
+- Uncheck:
+    - **Connect at power on**
+
+---
+
+## 🎯 Final Outcome
+
+You now have:
+- 🔒 Fully isolated hacking lab
+- 🧪 Safe penetration testing environment
+- 🌐 Optional internet via NAT (Kali only)
+
+## ⚠️ Security Reminder
+- Never connect vulnerable machines like:
+    - Metasploitable2
+    - DVWA
+to Bridged Network.
+
+Unless your goal is to accidentally turn your home WiFi into a public hacking playground.
+
+---
