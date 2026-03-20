@@ -243,3 +243,18 @@ This guide walks through setting up a **safe and isolated penetration testing la
 Username: msfadmin
 Password: msfadmin
 ```
+### 🌐 Check IP Address:
+``` ifconfig 
+```
+#### 👉 Expected: 192.168.56.x
+
+---
+
+# 🌐 4. Alternative Target: DVWA Setup (Inside Kali)
+ 
+ ### 📦 Install Required Packages:
+
+```
+sudo apt update
+sudo apt install apache2 mysql-server php php-mysqli git -y
+```
