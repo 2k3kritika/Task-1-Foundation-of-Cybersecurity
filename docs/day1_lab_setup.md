@@ -244,7 +244,8 @@ Username: msfadmin
 Password: msfadmin
 ```
 ### 🌐 Check IP Address:
-``` ifconfig 
+``` 
+ifconfig 
 ```
 #### 👉 Expected: 192.168.56.x
 
