@@ -215,17 +215,6 @@ After completing this, you should be able to:
 
 ---
 
-# 🚀 Next Step
-
-Move towards:
-
-* Bash scripting
-* Web security tools
-* System monitoring and logging
-* Networking fundamentals for cybersecurity
-
----
-
 # 🌐 Networking Fundamentals for Cybersecurity
 
 This repository documents core networking concepts required for cybersecurity, including the OSI model, TCP/IP suite, DNS, HTTP/HTTPS, and IP addressing.
