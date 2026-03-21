@@ -2,6 +2,8 @@
 
 This repository documents essential Linux commands required for system navigation, permission handling, package management, and networking. These commands form the foundation for cybersecurity, scripting, and system-level operations.
 
+[Back to main README](/README.md)
+
 ---
 
 # 📁 1. File System Navigation

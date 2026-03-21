@@ -2,6 +2,8 @@
 
 This guide explains different network configurations in VMware and how to set up a secure penetration testing lab.
 
+[Back to main README](/README.md)
+
 ---
 
 ## 🧠 1. Bridged Network (Real Network Exposure)

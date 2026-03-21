@@ -1,5 +1,7 @@
 # 🛠️ Day 1 – Lab Setup & Virtualization
 
+[Back to main README](/README.md)
+
 ## 🎯 Objective
 Set up a cybersecurity lab environment using virtual machines for penetration testing practice.  
 This includes installing:
