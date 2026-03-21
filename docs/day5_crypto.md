@@ -234,14 +234,3 @@ After completing this, you should:
 * Cryptography is only as strong as its implementation
 
 ---
-
-# 🚀 Next Step
-
-Move towards:
-
-* Password cracking (Hashcat, John the Ripper)
-* TLS analysis (Wireshark)
-* Web security testing (Burp Suite)
-* Public Key Infrastructure (PKI)
-
----
