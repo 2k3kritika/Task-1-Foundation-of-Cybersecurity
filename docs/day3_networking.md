@@ -435,26 +435,3 @@ After completing this, you should:
 * Understand IP addressing and subnet basics
 
 ---
-
-# ⚠️ Notes
-
-* Memorizing layers is useless without understanding flow
-* Focus on how data travels, not just definitions
-* These concepts are foundational for:
-
-  * Web security
-  * Network analysis
-  * Penetration testing
-
----
-
-# 🚀 Next Step
-
-Move towards:
-
-* Packet analysis (Wireshark)
-* Network scanning (Nmap)
-* Web security (Burp Suite)
-* Firewall and IDS concepts
-
----
