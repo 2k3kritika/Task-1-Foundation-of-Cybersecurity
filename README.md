@@ -196,7 +196,7 @@ Task1_Foundation/
 
 ## 🎥 Demo Video
 
-📌 LinkedIn Video: *(Paste your link here)*
+📌 LinkedIn Video: [Task 1 video tutorial](https://www.linkedin.com/posts/kritika-sharma-0150b6396_cybersecurity-ethicalhacking-kalilinux-activity-7442180051242033152-pEDj?utm_source=share&utm_medium=member_android&rcm=ACoAAGEww5EBVvPI4u2oCblZQLHt_Y9Hl0saEIk)
 
 ---
 
