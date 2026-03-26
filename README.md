@@ -224,6 +224,6 @@ All activities were performed in a **controlled lab environment**.
 
 ## 🚀 Next Step
 
-➡️ [Task 2: Network Security & Scanning](../Task2_NetworkSecurity/README.md)
+➡️ [Task 2: Network Security & Scanning](https://github.com/2k3kritika/Task-2-Network-Security-and-Scanning.git)
 
 ---
